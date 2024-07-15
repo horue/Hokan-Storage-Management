@@ -23,12 +23,17 @@ def novo_produto(f2):
     e1 = ct.CTkEntry(f2)
     e1.pack()
 
+    l3 = ct.CTkLabel(f2, text='Descrição do Produto')
+    l3.pack()
+
     l2 =ct.CTkLabel(f2, text='Quantidade do Produto')
     l2.pack(pady=10)
 
     global s1
     s1 = ct.CTkEntry(f2)
     s1.pack()
+
+
 
 
 
@@ -79,13 +84,8 @@ def initial(root):
     
     bar1(fh)
 
-    f1=ct.CTkScrollableFrame(fm, width=400, height=620, label_text='Menu de Opções')
-    f1.grid(column=0, row=1, padx=30, pady=(30,0))
-
-    frame1(f1)
-
     global f2
-    f2=ct.CTkScrollableFrame(fm, width=950, height=620, label_text='Menu')
+    f2=ct.CTkScrollableFrame(fm, width=1840, height=820, label_text='Menu')
     f2.grid(column=1, row=1, padx=30, pady=(30,0))
 
     frame2(f2)
