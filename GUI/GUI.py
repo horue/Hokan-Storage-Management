@@ -5,24 +5,13 @@ from customtkinter import filedialog
 from CTkSpinbox import *
 
 def get_command(value):
-    print("segmented button clicked:", value)
-    o1.set("")
-
-def show_image(new_image):
-    ph = ct.CTkImage(light_image=new_image, dark_image=new_image, size=(744/2, 1039/2))
-    i1.configure(image=ph)
-
-
-def bar1(fm):
-    #f0=ct.CTkFrame(fm, width=99, height=20)
-    #f0.grid(row=0, padx=0, pady=(0,30), sticky='ew', columnspan=True)
-
-    global o1
-    o1 = ct.CTkSegmentedButton(fm, values=["", "Adicionar novo cliente", "Adicionar vendedor"],corner_radius=50,fg_color='#dbdbdb', selected_color='#dbdbdb',unselected_color='#dbdbdb', text_color='black',selected_hover_color='#c0c0c0',command=get_command)
-    o1.set("")
     selected_value = o1.get()
-    o1.delete(selected_value)
-    o1.grid(row=2, column=0, pady=10, padx=10)
+    print("segmented button clicked:", value)
+    if selected_value == 'Adicionar Produto':
+        novo_produto(f2)
+    o1.set("")
+    
+
 
 def novo_produto(f2):
     for widget in f2.winfo_children():
@@ -38,14 +27,24 @@ def novo_produto(f2):
     l2.pack(pady=10)
 
     global s1
-    s1 = ct.IntVar()
-    s1 = CTkSpinbox(f2,
-          start_value = 1,
-          min_value = 1,
-          max_value = 99,
-          scroll_value = 1,
-          variable = s1)
+    s1 = ct.CTkEntry(f2)
     s1.pack()
+
+
+
+
+def bar1(fm):
+    #f0=ct.CTkFrame(fm, width=99, height=20)
+    #f0.grid(row=0, padx=0, pady=(0,30), sticky='ew', columnspan=True)
+
+    global o1
+    o1 = ct.CTkSegmentedButton(fm, values=["", "Adicionar novo cliente", "Adicionar vendedor", 'Adicionar Produto'],corner_radius=50,fg_color='#dbdbdb', selected_color='#dbdbdb',unselected_color='#dbdbdb', text_color='black',selected_hover_color='#c0c0c0',command=get_command)
+    o1.set("")
+    selected_value = o1.get()
+    o1.delete(selected_value)
+    o1.grid(row=2, column=0, pady=10, padx=10)
+
+
 
 
 def frame1(f1):
