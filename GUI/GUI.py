@@ -2,7 +2,7 @@ import customtkinter as ct
 from CTkMenuBar import *
 from  CustomTkinterMessagebox  import  *
 from customtkinter import filedialog
-from CTkSpinbox import *
+
 
 def get_command(value):
     selected_value = o1.get()
