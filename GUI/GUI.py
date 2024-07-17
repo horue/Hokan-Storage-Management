@@ -26,12 +26,23 @@ def novo_produto(f2):
     l3 = ct.CTkLabel(f2, text='Descrição do Produto')
     l3.pack()
 
+    e3 = ct.CTkEntry(f2)
+    e3.pack()
+
     l2 =ct.CTkLabel(f2, text='Quantidade do Produto')
     l2.pack(pady=10)
 
     global s1
     s1 = ct.CTkEntry(f2)
     s1.pack()
+
+    l4 =ct.CTkLabel(f2, text='Data de Entrada')
+    l4.pack(pady=10)
+
+    global s1
+    s1 = ct.CTkEntry(f2)
+    s1.pack()
+
 
 
 
