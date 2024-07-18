@@ -44,11 +44,6 @@ def novo_produto(f2):
     s1.pack()
 
 
-
-
-
-
-
 def bar1(fm):
     #f0=ct.CTkFrame(fm, width=99, height=20)
     #f0.grid(row=0, padx=0, pady=(0,30), sticky='ew', columnspan=True)
